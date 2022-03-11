@@ -4,7 +4,7 @@ from selenium import webdriver
 from selenium.webdriver.common.by import By
 
 #Déclaration des variables
-url = input("saisissez l'url : ") #"https://www.billetreduc.com/247341/evt.htm?utm_source=sendinblue&utm_campaign=campagne+14311+75+tc+humour+thematique+humour+noir&utm_medium=email"
+url = input("saisissez l'url : ")
 resultat = ""
 recherche = []
 demande = "https://sitereview.bluecoat.com/#/lookup-result"#Site de BlueCoat
