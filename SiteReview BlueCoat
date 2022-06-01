@@ -7,6 +7,7 @@ from selenium.webdriver.common.by import By
 url = input("saisissez l'url : ")
 resultat = ""
 recherche = []
+test = ""
 demande = "https://sitereview.bluecoat.com/#/lookup-result"#Site de BlueCoat
 
 #Fonction de recherche du nom de domaine
@@ -41,3 +42,5 @@ for r in categorie:
 
 #Fermeture de la fenêtre
 driver.close()
+
+print(test)
