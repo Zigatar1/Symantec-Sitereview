@@ -123,7 +123,8 @@ for ligne in lecture :
   demande_base_donnee(resultat)
   
   # Écriture des données 
-  data_sql = [resultat_sql, 1]
+  sql_result = resultat_sql[0]
+  data_sql = [sql_result, 1]
   writer.writerow(data_sql)
   
   #Reinitialisation des variables 
