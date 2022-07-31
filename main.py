@@ -26,14 +26,10 @@ csv_file = input("insérer chemin d'accès du csv :")
 historique = open(csv_file,'r')
 
 #Ouverture du CSV de résultat 
-header = ['categorie', 'nbfois']
+CSV_result = open('resultat_csv.csv', 'w', newline='', encoding='utf8')
 
-CSV_result = open('resultat_csv.csv', 'w', newline='')
-
-writer = csv.writer(CSV_result, delimiter=';')
-
-# Écriture de entête
-writer.writerow(header)
+writer = csv.DictWriter(CSV_result, fieldnames=['Catégorie', 'Nombre de fois'])
+writer.writeheader()
 
 #Création du tableau des résultats 
 value = []
@@ -121,11 +117,9 @@ for ligne in lecture :
     resultat = "file"
   
   demande_base_donnee(resultat)
-  
   # Écriture des données 
   sql_result = resultat_sql[0]
-  data_sql = [sql_result, 1]
-  writer.writerow(data_sql)
+  writer.writerow({'Catégorie': sql_result, 'Nombre de fois': 1})
   
   #Reinitialisation des variables 
   requete_domaine = ""
@@ -135,23 +129,22 @@ for ligne in lecture :
     demande_bluecoat(resultat)
     
     # Écriture des données 
-    data_bluecoat = [resultat_bluecoat, 1]
-    writer.writerow(data_bluecoat)
+    writer.writerow({'Catégorie': resultat_bluecoat, 'Nombre de fois': 1})
     
     value.append([resultat,resultat_bluecoat])
     
     resultat = ""
 
-print(value)
-
-#Créer un curseur de base de données pour effectuer des opérations SQL
+#Création d'un curseur de base de données pour effectuer des opérations SQL
 cur = db.cursor()
-insertion_requete = "INSERT INTO `domaines`(`domaine`, `categorie`) VALUES (%s,%s)"
 
+#Création de la requête SQL pour l'ajout des catégories et domaines 
+insertion_requete = "INSERT INTO `domaines`(`domaine`, `categorie`) VALUES (%s,%s)"
 cur.executemany(insertion_requete,value)
 db.commit()
 print(cur.rowcount, "nouveaux domaines et catégories ont été insérés.")
 
+#Fermeture des différents fichiers
 db.close()
 historique.close()
 CSV_result.close()
