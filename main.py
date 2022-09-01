@@ -98,7 +98,15 @@ for ligne in lecture :
     date_url = ligne["Date/heure d’accès\xa0–\xa0UTC+01:00 (dd/MM/yyyy)[DST]"]
   else:
     date_url = ligne['Date/heure de la dernière visite\xa0–\xa0UTC+01:00 (dd/MM/yyyy)[DST]']
+    
+    
+  # date_url = ligne['Date/heure de la dernière visite\xa0–\xa0UTC+01:00 (dd/MM/yyyy)[DST]' or 'Date/heure d’accès\xa0–\xa0UTC+01:00 (dd/MM/yyyy)[DST]']
   
+  # Edge = 'Date/heure d’accès\xa0–\xa0UTC+01:00 (dd/MM/yyyy)[DST]' 
+  # or 
+  # Chrome = 'Date/heure de la dernière visite\xa0–\xa0UTC+01:00 (dd/MM/yyyy)[DST]'
+
+
   #Fonction de recherche du nom de domaine
   result_url = urlparse(historique_url)
   resultat = result_url.hostname
@@ -130,8 +138,8 @@ for ligne in lecture :
     cur = db.cursor()
 
     #Création de la requête SQL pour l'ajout des catégories et domaines
-    insertion_requete = "INSERT INTO `domaines`(`domaine`, `categorie`) VALUES (" + resultat , resultat_bluecoat + ")" #/////////
-    print(insertion_requete)  #/////////
+    insertion_requete = "INSERT INTO `domaines`(`domaine`, `categorie`) VALUES (" + resultat , resultat_bluecoat + ")"
+    print(insertion_requete)
     cur.execute(insertion_requete)
     db.commit()
 
