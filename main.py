@@ -98,12 +98,9 @@ for ligne in lecture :
     date_url = ligne["Date/heure d’accès\xa0–\xa0UTC+01:00 (dd/MM/yyyy)[DST]"]
   else:
     date_url = ligne['Date/heure de la dernière visite\xa0–\xa0UTC+01:00 (dd/MM/yyyy)[DST]']
-    
-    
-  # date_url = ligne['Date/heure de la dernière visite\xa0–\xa0UTC+01:00 (dd/MM/yyyy)[DST]' or 'Date/heure d’accès\xa0–\xa0UTC+01:00 (dd/MM/yyyy)[DST]']
-  
+
   # Edge = 'Date/heure d’accès\xa0–\xa0UTC+01:00 (dd/MM/yyyy)[DST]' 
-  # or 
+  # ou 
   # Chrome = 'Date/heure de la dernière visite\xa0–\xa0UTC+01:00 (dd/MM/yyyy)[DST]'
 
 
