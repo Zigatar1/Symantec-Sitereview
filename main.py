@@ -135,9 +135,9 @@ for ligne in lecture :
     cur = db.cursor()
 
     #Création de la requête SQL pour l'ajout des catégories et domaines
-    insertion_requete = "INSERT INTO `domaines`(`domaine`, `categorie`) VALUES (" + resultat , resultat_bluecoat + ")"
-    print(insertion_requete)
-    cur.execute(insertion_requete)
+    val = [resultat,resultat_bluecoat]
+    insertion_requete = "INSERT INTO `domaines` (`domaine`, `categorie`) VALUES (%s, %s)" 
+    cur.execute(insertion_requete,val)
     db.commit()
 
     print()
