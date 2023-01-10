@@ -6,7 +6,7 @@ Ceci est un script python permettant grâce à un export d'historique de navigat
 
 Assurez-vous d'avoir Python 3 installé sur votre ordinateur.
 
-Il se compose de plusieurs librairies python : MySQL connector, CSV, Selenium, URLLIB et time. seule selenium demande une installation grâce à Pip.
+Il se compose de plusieurs librairies python : MySQL connector, CSV, Selenium, URLLIB et time. seule selenium et mysql-connector demande une installation grâce à Pip.
 
 `
 pip install selenium
