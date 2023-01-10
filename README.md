@@ -10,6 +10,7 @@ Il se compose de plusieurs librairies python : MySQL connector, CSV, Selenium, U
 
 `
 pip install selenium
+``
 pip install mysql-connector
 `
 
