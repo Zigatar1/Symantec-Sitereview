@@ -25,7 +25,7 @@ Il sera nécessaire un serveur MySQL pour importer la base de données (j'utilis
 
 Exécutez le script en utilisant la commande `python main.py`.
 
-##Ressources 
+## Ressources 
 
 Fichier pour la base de donnée : https://dsi.ut-capitole.fr/blacklists/
 Driver Chrome pour Selenium : https://sites.google.com/chromium.org/driver/
