@@ -1,4 +1,4 @@
-# Symantec-Sitereview 
+#                                 Symantec-Sitereview 
 
 Ceci est un script python permettant grâce à un export d'historique de navigation de savoir à quelle catégorie appartient le site avec l'aide d'une base de données locale provenant de l'université de Toulouse et du site Symantec Sitereview.
 
@@ -11,11 +11,12 @@ Il se compose de plusieurs librairies python : MySQL connector, CSV, Selenium, U
 `
 pip install selenium
 `
+
 `
 pip install mysql-connector
 `
 
-Clonez ce référentiel ou téléchargez-le en tant que fichier ZIP.
+Clonez ce projet ou téléchargez-le en tant que fichier ZIP.
 
 Ouvrez un terminal et accédez au répertoire contenant le script.
 
