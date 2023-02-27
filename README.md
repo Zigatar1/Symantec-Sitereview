@@ -28,6 +28,10 @@ Exécutez le script en utilisant la commande `python main.py`.
 
 N'oubliez pas de changer le chemin d'accès du driver chrome (ligne `66 driver = webdriver.Chrome(executable_path="chromedriver.exe"`)
 
+`demande_base_donnee` intérroge la base de données local (ligne `14 db = mysql.connector.connect()` doit etre modifiée avec vos parametres de connection à votre base de données)
+
+`demande_bluecoat` intérroge la site bluecoat (https://sitereview.bluecoat.com/#/) si le nom de domaine n'est pas dans la base de données local
+
 ## Ressources 
 
 Fichier pour la base de donnée : https://dsi.ut-capitole.fr/blacklists/
