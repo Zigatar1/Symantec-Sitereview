@@ -29,5 +29,7 @@ Exécutez le script en utilisant la commande `python main.py`.
 ## Ressources 
 
 Fichier pour la base de donnée : https://dsi.ut-capitole.fr/blacklists/
+
 Driver Chrome pour Selenium : https://sites.google.com/chromium.org/driver/
+
 Symantec Sitereview : https://sitereview.bluecoat.com/#/
