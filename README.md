@@ -26,7 +26,7 @@ Il sera nécessaire un serveur MySQL pour importer la base de données (j'utilis
 
 Exécutez le script en utilisant la commande `python main.py`.
 
-N'oubliez pas de changer le chemin d'accès du dirver chrome (ligne `66 driver = webdriver.Chrome(executable_path="chromedriver.exe"`)
+N'oubliez pas de changer le chemin d'accès du driver chrome (ligne `66 driver = webdriver.Chrome(executable_path="chromedriver.exe"`)
 
 ## Ressources 
 
