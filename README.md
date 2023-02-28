@@ -6,7 +6,7 @@ Ceci est un script python permettant grâce à un export d'historique de navigat
 
 Assurez-vous d'avoir Python 3 installé sur votre ordinateur.
 
-Il se compose de plusieurs librairies python : MySQL connector, CSV, Selenium, URLLIB et time. seule selenium et mysql-connector demande une installation grâce à Pip.
+Il se compose de plusieurs librairies python : MySQL connector, CSV, Selenium, URLLIB et time. Seule selenium et mysql-connector demande une installation grâce à Pip.
 
 `
 pip install selenium
@@ -20,17 +20,19 @@ Clonez ce projet ou téléchargez-le en tant que fichier ZIP.
 
 Ouvrez un terminal et accédez au répertoire contenant le script.
 
-Il sera nécessaire un serveur MySQL pour importer la base de données (j'utilise MAMP pour mon cas)
+Il sera nécessaire un serveur MySQL pour importer la base de données (j'utilise MAMP pour mon cas).
 
 ## Utilisation
 
 Exécutez le script en utilisant la commande `python main.py`.
 
-N'oubliez pas de changer le chemin d'accès du driver chrome (ligne `66 driver = webdriver.Chrome(executable_path="chromedriver.exe"`)
+Lors de la demande du chemin d'accès, vous pouvez mettre un chemin complet ou raccourci s'il se trouve dans le même dossier.
 
-`demande_base_donnee` intérroge la base de données local (ligne `14 db = mysql.connector.connect()` doit etre modifiée avec vos parametres de connection à votre base de données)
+N'oubliez pas de changer le chemin d'accès du driver chrome (ligne `66 driver = webdriver.Chrome(executable_path="chromedriver.exe"`).
 
-`demande_bluecoat` intérroge la site bluecoat (https://sitereview.bluecoat.com/#/) si le nom de domaine n'est pas dans la base de données local
+`demande_base_donnee` intérroge la base de données local (ligne `14 db = mysql.connector.connect()` doit etre modifiée avec vos parametres de connection à votre base de données).
+
+`demande_bluecoat` intérroge la site bluecoat (https://sitereview.bluecoat.com/#/) si le nom de domaine n'est pas dans la base de données local.
 
 ## Ressources 
 
