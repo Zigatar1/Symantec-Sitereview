@@ -22,6 +22,8 @@ Ouvrez un terminal et accédez au répertoire contenant le script.
 
 Il sera nécessaire un serveur MySQL pour importer la base de données (j'utilise MAMP pour mon cas).
 
+Pour l'initialisation de la base de données, il est nécessaire d'exécuter `BasedeDonnées_V2.py` en ayant reconstitué en un seul fichier `domains_adult.txt` et de modifier la ligne `3 mydb = mysql.connector.connect()` avec vos paramètres de connexion.
+
 ## Utilisation
 
 Exécutez le script en utilisant la commande `python main.py`.
@@ -30,7 +32,7 @@ Lors de la demande du chemin d'accès, vous pouvez mettre un chemin complet ou r
 
 N'oubliez pas de changer le chemin d'accès du driver chrome (ligne `66 driver = webdriver.Chrome(executable_path="chromedriver.exe"`).
 
-`demande_base_donnee` intérroge la base de données local (ligne `14 db = mysql.connector.connect()` doit etre modifiée avec vos parametres de connection à votre base de données).
+`demande_base_donnee` intérroge la base de données local (ligne `14 db = mysql.connector.connect()` doit etre modifiée avec vos parametres de connexion à votre base de données).
 
 `demande_bluecoat` intérroge la site bluecoat (https://sitereview.bluecoat.com/#/) si le nom de domaine n'est pas dans la base de données local.
 
